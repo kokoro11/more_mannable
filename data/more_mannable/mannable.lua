@@ -56,15 +56,16 @@ local function auxManning(shipMgr)
     if not moreMannable.auxEnabled then
         return
     end
+    local temporal = shipMgr:GetSystem(20)
+    if temporal then
+        temporal.bBoostable = true
+    end
     local iShipId = shipMgr.iShipId
     local vCrewList = shipMgr.vCrewList
     for i = 0, vCrewList:size() - 1 do
         local crew = vCrewList[i]
         local sys = crew.currentSystem
         if sys and auxSystems[sys.iSystemType] and sys.iActiveManned < 1 and sys:Powered() and sys.iHackEffect <= 0 then
-            if sys.iSystemType == 20 then
-                sys.bBoostable = true
-            end
             if iShipId == 0 then
                 local slot = sys.table.moreMannable.slot
                 if slot and slot.x == crew.x // 35 and slot.y == crew.y // 35
