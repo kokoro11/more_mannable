@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FTL>
+
+<version>^1.10.0</version>
+
+<mod:findLike type="scripts" limit="1">
+    <mod-append:script>data/more_mannable/config.lua</mod-append:script>
+    <mod-append:script>data/more_mannable/imgs.lua</mod-append:script>
+    <mod-append:script>data/more_mannable/render.lua</mod-append:script>
+    <mod-append:script>data/more_mannable/mannable.lua</mod-append:script>
+</mod:findLike>
+
+</FTL>
