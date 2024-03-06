@@ -39,8 +39,14 @@ script.on_internal_event(Defines.InternalEvents.SHIP_LOOP, function(shipMgr)
                     Graphics.CSurface.GL_DestroyPrimitive(sys.interiorImageOn)
                 end
                 sys.interiorImageOn = createPrimitive(img_path, loc.x, loc.y)
-                --sys.interiorImageManned = createPrimitive(img_path, loc.x, loc.y)
-                --sys.interiorImageMannedFancy = createPrimitive(img_path, loc.x, loc.y)
+                if sys.interiorImageManned then
+                    Graphics.CSurface.GL_DestroyPrimitive(sys.interiorImageManned)
+                end
+                sys.interiorImageManned = createPrimitive(img_path, loc.x, loc.y)
+                if sys.interiorImageMannedFancy then
+                    Graphics.CSurface.GL_DestroyPrimitive(sys.interiorImageMannedFancy)
+                end
+                sys.interiorImageMannedFancy = createPrimitive(img_path, loc.x, loc.y)
             end
             sys.table.moreMannable.interiorImageReplaced = true
         end

@@ -1,5 +1,13 @@
 local moreMannable = mods.moreMannable
 
+local directions = {
+    [0] = 'down',
+    [1] = 'right',
+    [2] = 'up',
+    [3] = 'left',
+    [4] = 'none',
+}
+
 local mainSystems = {
     [2] = true,
     [4] = true,
@@ -57,8 +65,12 @@ local function auxManning(shipMgr)
         return
     end
     local temporal = shipMgr:GetSystem(20)
-    if temporal then
+    if temporal and not temporal.bBoostable then
         temporal.bBoostable = true
+        temporal.computerLevel = math.max(temporal.computerLevel, 0)
+    end
+    if shipMgr.bAutomated then
+        return
     end
     local iShipId = shipMgr.iShipId
     local vCrewList = shipMgr.vCrewList
@@ -111,7 +123,7 @@ local hackingSpeedupCases = {
     [2] = function(enemyShip, rate)
         local sys = enemyShip.oxygenSystem
         local refill = sys:GetRefillSpeed()
-        local delta = math.abs(refill * rate)
+        local delta = math.abs(refill) * rate
         local oxygenLevels = sys.oxygenLevels
         for i = 0, oxygenLevels:size() - 1 do
             oxygenLevels[i] = math.max(oxygenLevels[i] - delta, 0)
