@@ -6082,4 +6082,111 @@
     <mod:findLike type="drones"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
 </mod:findLike></mod:findName>
 
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_BLACKOPS"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_BLACKOPS_2"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_BLACKOPS_3"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_MINESWEEPER"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_MINESWEEPER_2"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>down</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>left</direction><number>2</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_MINESWEEPER_3"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_CYBER"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>right</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>left</direction><number>2</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_CYBER_2"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_CYBER_3"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>right</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_NBC"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>right</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_NBC_2"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>left</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>right</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_NBC_3"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>left</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>left</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
 </FTL>
