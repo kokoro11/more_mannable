@@ -3235,6 +3235,15 @@
     <mod:findLike type="artillery"><mod:selector room="12"/><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
 </mod:findLike></mod:findName>
 
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_PLEASUREFLAG_2"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>down</direction><number>2</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="temporal"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>down</direction><number>2</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
 <mod:findName type="shipBlueprint" name="TRC_PLAYER_SHIP_KESTREL"><mod:findLike type="systemList">
     <mod:findLike type="cloaking"><mod-overwrite:slot><direction>down</direction><number>2</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>2</number></mod-overwrite:slot></mod:findLike>
@@ -3545,14 +3554,14 @@
     <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="oxygen"><mod-overwrite:slot><direction>left</direction><number>2</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
-    <mod:findLike type="artillery"><mod:selector room="17"/><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="artillery"><mod:selector room="17"/><mod:setAttributes img="room_artillery_5"/><mod-overwrite:slot><direction>right</direction><number>1</number></mod-overwrite:slot></mod:findLike>
 </mod:findLike></mod:findName>
 
 <mod:findName type="shipBlueprint" name="PLAYER_SHIP_GUNSHIP_ELITE_2"><mod:findLike type="systemList">
     <mod:findLike type="cloaking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="mind"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
-    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod:setAttributes img="room_oxygen_10"/><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="drones"><mod-overwrite:slot><direction>left</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="artillery"><mod:selector room="3"/><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="artillery"><mod:selector room="15"/><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
@@ -3620,7 +3629,7 @@
 </mod:findLike></mod:findName>
 
 <mod:findName type="shipBlueprint" name="PLAYER_SHIP_TWISTED2_3"><mod:findLike type="systemList">
-    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="hacking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
@@ -3638,7 +3647,7 @@
 
 <mod:findName type="shipBlueprint" name="PLAYER_SHIP_TWISTED3_2"><mod:findLike type="systemList">
     <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>2</number></mod-overwrite:slot></mod:findLike>
-    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="oxygen"><mod-overwrite:slot><direction>left</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="artillery"><mod:selector room="0"/><mod:setAttributes img="room_artillery_fr_6"/><mod-overwrite:slot><direction>right</direction><number>1</number></mod-overwrite:slot></mod:findLike>
@@ -3676,9 +3685,9 @@
 <mod:findName type="shipBlueprint" name="PLAYER_SHIP_TWISTED4_3"><mod:findLike type="systemList">
     <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="mind"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
-    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="oxygen"><mod-overwrite:slot><direction>down</direction><number>0</number></mod-overwrite:slot></mod:findLike>
-    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
 </mod:findLike></mod:findName>
 
 <mod:findName type="shipBlueprint" name="PLAYER_SHIP_TWISTED5"><mod:findLike type="systemList">
@@ -3730,7 +3739,7 @@
     <mod:findLike type="mind"><mod-overwrite:slot><direction>left</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="oxygen"><mod-overwrite:slot><direction>left</direction><number>1</number></mod-overwrite:slot></mod:findLike>
-    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>right</direction><number>3</number></mod-overwrite:slot></mod:findLike>
 </mod:findLike></mod:findName>
 
 <mod:findName type="shipBlueprint" name="PLAYER_SHIP_TWISTED7"><mod:findLike type="systemList">
@@ -5304,6 +5313,30 @@
     <mod:findLike type="drones"><mod-overwrite:slot><direction>right</direction><number>3</number></mod-overwrite:slot></mod:findLike>
 </mod:findLike></mod:findName>
 
+<mod:findName type="shipBlueprint" name="TNE_PLAYER_SHIP_GRENADIER"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>right</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>left</direction><number>2</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="TNE_PLAYER_SHIP_GRENADIER_2"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>right</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="TNE_PLAYER_SHIP_GRENADIER_3"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>right</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="drones"><mod-overwrite:slot><direction>right</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
 <mod:findName type="shipBlueprint" name="TNE_PLAYER_SHIP_STUPIDGHOST"><mod:findLike type="systemList">
     <mod:findLike type="cloaking"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="mind"><mod-overwrite:slot><direction>up</direction><number>0</number></mod-overwrite:slot></mod:findLike>
@@ -5552,6 +5585,13 @@
     <mod:findLike type="hacking"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="oxygen"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
     <mod:findLike type="drones"><mod-overwrite:slot><direction>right</direction><number>3</number></mod-overwrite:slot></mod:findLike>
+</mod:findLike></mod:findName>
+
+<mod:findName type="shipBlueprint" name="PLAYER_SHIP_RAD_CORVETTE_ELITE_2"><mod:findLike type="systemList">
+    <mod:findLike type="cloaking"><mod-overwrite:slot><direction>left</direction><number>0</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="mind"><mod-overwrite:slot><direction>up</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="hacking"><mod-overwrite:slot><direction>down</direction><number>1</number></mod-overwrite:slot></mod:findLike>
+    <mod:findLike type="oxygen"><mod-overwrite:slot><direction>down</direction><number>0</number></mod-overwrite:slot></mod:findLike>
 </mod:findLike></mod:findName>
 
 <mod:findName type="shipBlueprint" name="PLAYER_SHIP_KODIAK"><mod:findLike type="systemList">
