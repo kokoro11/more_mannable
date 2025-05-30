@@ -30,7 +30,7 @@
 			2.4.1 Hi-res Bkgs
 			1.0 for FTL 1.03.1
 	-->
-	<version><![CDATA[ 1.4 ]]></version>
+	<version><![CDATA[ 1.5 ]]></version>
 
 
 	<description>
@@ -60,13 +60,13 @@ Recommended Patch Order:
 4. More Mannable Systems
 
 
-Latest Version: v1.4
+Latest Version: v1.5
 Download Link: https://github.com/kokoro11/more_mannable/releases
 
 
 Changelog:
 
-v1.4:
+v1.5:
 - Updated for compatibility with Multiverse 5.5.
 - Fixed an oxygen overflow bug.
 v1.3:
