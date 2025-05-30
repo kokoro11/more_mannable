@@ -195,7 +195,7 @@ local manningCases = {
         local delta = sys:GetRefillSpeed() * 1
         local oxygenLevels = sys.oxygenLevels
         for i = 0, oxygenLevels:size() - 1 do
-            oxygenLevels[i] = math.max(oxygenLevels[i] + delta, 0)
+            oxygenLevels[i] = math.min(math.max(oxygenLevels[i] + delta, 0), 100)
         end
     end,
     -- drones
