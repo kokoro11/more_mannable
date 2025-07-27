@@ -22,6 +22,30 @@
                 <number>0</number>
             </mod-append:slot>
         </mod:findLike>
+        <mod:findLike type="cloaking">
+            <mod-append:slot>
+                <direction>up</direction>
+                <number>0</number>
+            </mod-append:slot>
+        </mod:findLike>
+        <mod:findLike type="mind">
+            <mod-append:slot>
+                <direction>up</direction>
+                <number>0</number>
+            </mod-append:slot>
+        </mod:findLike>
+        <mod:findLike type="hacking">
+            <mod-append:slot>
+                <direction>up</direction>
+                <number>0</number>
+            </mod-append:slot>
+        </mod:findLike>
+        <mod:findLike type="temporal">
+            <mod-append:slot>
+                <direction>up</direction>
+                <number>0</number>
+            </mod-append:slot>
+        </mod:findLike>
     </mod:findLike>
 </mod:findLike>
 

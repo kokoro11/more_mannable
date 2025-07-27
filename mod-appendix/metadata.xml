@@ -1,51 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<!--
-		CDATA tags mean no need to escape special characters.
-		Don't worry about spaces at the start/end. That gets trimmed.
-	-->
-
-
-	<!-- The title of this mod. -->
 	<title><![CDATA[ More Mannable Systems ]]></title>
-
-
-	<!--
-		This mod's thread on subsetgames.com. (haha, not actually)
-		If there's no thread yet, create one to announce your upcoming mod in the
-		forum. Then paste the url here.
-	-->
 	<threadUrl><![CDATA[ https://ftlmultiverse.boards.net/thread/73 ]]></threadUrl>
-
-
-	<!-- Your forum user name. -->
 	<author><![CDATA[ kokoro11 ]]></author>
-
-
-	<!--
-		The revision/variant of this release, preferably at least a number.
-		Examples:
-			0.3
-			2.1c Ships Only WIP
-			2.4.1 Hi-res Bkgs
-			1.0 for FTL 1.03.1
-	-->
-	<version><![CDATA[ 1.5 ]]></version>
-
-
+	<version><![CDATA[ 2.0 ]]></version>
 	<description>
 <![CDATA[
+More Mannable Systems 2.0 is here, introducing crew manning skill level progression!
+
 This addon expands your strategic options by allowing crew members to man a wider array of ship systems beyond the standard six systems. Granting direct control over more systems provides unique tactical advantages and enhances your ship's capabilities.
 
+New Feature: Manning Skill Levels
+This feature requires the "ADVANCED MANNING" option to be enabled.
+Crew members can now gain experience and level up their proficiency at manning the newly available systems. A crew member's skill level determines the power of the bonus they provide.
+How to Gain Skill: Crew gain experience simply by manning a system or by being at the station when the system is used during combat.
+Training Limit: A single crew member can only gain up to 2 skill points for the same system per jump.
+Exclusions: Crew Drones cannot gain skills.
+
 Manning Bonuses:
-- Oxygen: Doubles oxygen refill speed.
-- Drones: Increases drone operating speed by 25% (both crew and space drones).
-- Artillery: Boosts weapon recharge speed by 25%.
+Bonuses now scale with your crew's manning skills*.
+- Oxygen: Increases oxygen refill speed by 100/200/300%.
+- Drones: Increases drone operating speed by 20/30/40% (both crew and space drones).
+- Artillery: Boosts weapon recharge speed by 10/20/30%.
+- Temporal*: Reduces system cooldown by 20/33/43%.
 - Cloaking*: Increases evasion by 40% while cloaking is active.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also increases evasion by 10% while system is powered.
 - Mind Control*: Extends mind control duration by 25%.
+  + (Level 1) Also reduces system cooldown by 50%.
+  + (Level 2) Also causes the mind controlled crew to act twice as fast.
 - Hacking*: Accelerates hacking speed by 25%.
-- Temporal*: Reduces system cooldown by 20%.
-*AUX MANNING Required: To enable manning for Cloaking, Mind Control, Hacking and Temporal systems, please activate the "AUX MANNING" option in the main menu.
+  + (Level 1) Also reduces system cooldown by 20%.
+  + (Level 2) Also counters enemy's hacking drone.
+
+*ADVANCED MANNING Game Option:
+To access the new features, you must enable the "ADVANCED MANNING" option in the main menu. This option unlocks:
+- The ability to man the Cloaking, Mind Control, Hacking, and Temporal systems.
+- The entire Manning Skill Level progression and its associated tiered bonuses.
 
 Compatibility:
 More Mannable Systems is designed for broad compatibility with other Multiverse addons. For a detailed list of compatible addons, please see the dedicated "Compatibility List" Below.
@@ -60,12 +51,14 @@ Recommended Patch Order:
 4. More Mannable Systems
 
 
-Latest Version: v1.5
+Latest Version: v2.0
 Download Link: https://github.com/kokoro11/more_mannable/releases
 
 
 Changelog:
-
+v2.0:
+- New feature: manning skill levels.
+- Updated compatibility with other addons.
 v1.5:
 - Updated for compatibility with Multiverse 5.5.
 - Fixed an oxygen overflow bug.
@@ -77,45 +70,30 @@ v1.2:
 Compatibility List:
 
 THE RENEGADE COLLECTION
+FORGOTTEN RACES
+FORGOTTEN RACES - DIAMOND
+The Outer Expansion
+R&D
+Fishier Than Light
+Galaxy On Fire
+Darkest Desire
+Insurrection+ Selection (IPS)
+Cosmic Metalloid Expansion
+The Tardis
+FTLLJAMMER
+The Potential - Multiverse Edition
+FTL: FORGEMASTER
+Tradition N Experiment
 Obsidian Cruiser
 Escort Duty
 Tiberian Sun Pack
-R&D
-The Outer Expansion
 Tantive IV
-FTL: FORGEMASTER
+AI Cruisers
 HEKTAR COLLECTION
-Galaxy On Fire
-Darkest Desire
 Dino's Hangar
-FORGOTTEN RACES
-FORGOTTEN RACES - DIAMOND
 Faster Than Cobalt
-Cosmic Metalloid Expansion
-Insurrection+ Selection (IPS)
-Tradition N Experiment
+Lizzard's Variety
 Federation Special Forces
 ]]>
 	</description>
-
-	<!--
-		Suggestions for the description...
-
-		Write a short paragraph about the mod's effect first (what style ship, how
-		does it affect gameplay). No need to introduce yourself.
-
-		Optionally add a paragraph of background flavor.
-
-		Optionally list important features.
-
-		List any concerns about mod compatibility, preferred order, or requirements.
-
-		Mention "Replaces the XYZ ship." if relevant.
-			Kestrel-A, Engi-A,    Fed-A,     Zoltan-A,
-			Stealth-A, Rock-A,    Slug-A,    Mantis-A,
-			Lanius-A,  Crystal-A
-
-		Above all, keep the description general, so you won't have to edit
-		that again for each new version.
-	-->
 </metadata>
