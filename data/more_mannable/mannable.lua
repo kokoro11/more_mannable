@@ -95,33 +95,34 @@ local function auxManning(shipMgr)
     size = vCrewList:size()
     for i = 0, size - 1 do
         local crew = vCrewList[i]
-        local sys = crew.currentSystem
-        if sys and not (crew.bOutOfGame or crew.bDead) then
-            --[[ if not sys.table then
-                print("MMS.auxManning: something went wrong: sys.table is nil")
-                log(string.format(
-                    "MMS.auxManning:shipMgr.iShipId=%s,crew.iShipId=%s,crew.iRoomId=%s,name=%s",
-                    shipMgr.iShipId, crew.iShipId, crew.iRoomId, crew:GetName()
-                ))
-                log(string.format(
-                    "MMS.auxManning:sysId=%s,sysName=%s,iShipId=%s,roomId=%s",
-                    sys.iSystemType, sys.name, sys._shipObj.iShipId, sys.roomId
-                ))
-            end ]]
-            local sysTable = sys.table.moreMannable
-            if not sysTable.resolved then
-                if sysTable.isMms and sys:Powered() and sys.iHackEffect <= 0 then
-                    local sysId = sys.iSystemType
-                    if sysTable.isAux then
-                        if crew.bActiveManning then
-                            sys.iActiveManned = math.max(sys.iActiveManned,
-                                crew.table.moreMannable.skills[sysId][1])
-                            --sys.bManned = true
-                            sysTable.resolved = true
-                            sysTable.manningCrew = crew
-                        else
-                            if shipMgr.iShipId == 0 then
-                                if sysTable.slotId == crew.currentSlot.slotId and not crew:IsBusy() and not crew:GetIntruder() and crew:CanMan() then
+        -- Do not use crew.currentSystem or crew.bActiveManning if crew:GetIntruder() is true, it's not updated for intruders
+        if crew.bOutOfGame or crew.bDead or crew:GetIntruder() then
+            crew.bActiveManning = false
+        else
+            local sys = crew.currentSystem
+            if sys then
+                local sysTable = sys.table.moreMannable
+                if not sysTable.resolved then
+                    if sysTable.isMms and sys:Powered() and sys.iHackEffect <= 0 then
+                        local sysId = sys.iSystemType
+                        if sysTable.isAux then
+                            if crew.bActiveManning then
+                                sys.iActiveManned = math.max(sys.iActiveManned,
+                                    crew.table.moreMannable.skills[sysId][1])
+                                --sys.bManned = true
+                                sysTable.resolved = true
+                                sysTable.manningCrew = crew
+                            else
+                                if shipMgr.iShipId == 0 then
+                                    if sysTable.slotId == crew.currentSlot.slotId and not crew:IsBusy() and crew:CanMan() then
+                                        crew.bActiveManning = true
+                                        sys.iActiveManned = math.max(sys.iActiveManned,
+                                            crew.table.moreMannable.skills[sysId][1])
+                                        --sys.bManned = true
+                                        sysTable.resolved = true
+                                        sysTable.manningCrew = crew
+                                    end
+                                elseif not crew:IsBusy() and crew:CanMan() then
                                     crew.bActiveManning = true
                                     sys.iActiveManned = math.max(sys.iActiveManned,
                                         crew.table.moreMannable.skills[sysId][1])
@@ -129,8 +130,9 @@ local function auxManning(shipMgr)
                                     sysTable.resolved = true
                                     sysTable.manningCrew = crew
                                 end
-                            elseif not crew:IsBusy() and not crew:GetIntruder() and crew:CanMan() then
-                                crew.bActiveManning = true
+                            end
+                        else
+                            if crew.bActiveManning then
                                 sys.iActiveManned = math.max(sys.iActiveManned,
                                     crew.table.moreMannable.skills[sysId][1])
                                 --sys.bManned = true
@@ -139,16 +141,8 @@ local function auxManning(shipMgr)
                             end
                         end
                     else
-                        if crew.bActiveManning then
-                            sys.iActiveManned = math.max(sys.iActiveManned,
-                                crew.table.moreMannable.skills[sysId][1])
-                            --sys.bManned = true
-                            sysTable.resolved = true
-                            sysTable.manningCrew = crew
-                        end
+                        sysTable.resolved = true
                     end
-                else
-                    sysTable.resolved = true
                 end
             end
         end

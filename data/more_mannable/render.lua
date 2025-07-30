@@ -80,7 +80,7 @@ script.on_internal_event(Defines.InternalEvents.GET_LEVEL_DESCRIPTION, function(
         return
     else
         useOrig = true
-        local orig = GetLevelDescription(sysId, level, isTooltip)
+        local orig = GetLevelDescription(sysId, level - 1, isTooltip)
         useOrig = false
         return orig .. TEXTS.MANNING_BONUS() .. TEXTS.MANNING_BONUS_ENTRY[sysId]()
     end
