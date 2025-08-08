@@ -21,6 +21,58 @@ local function newSkillTable()
     return t
 end
 
+local dataOrder0 = { 2, 4, 11, 10 }
+local dataOrder1 = { 14, 15, 20 }
+
+---@param crew Hyperspace.CrewMember
+---@param skills SkillTable
+local function saveSkillTable(crew, skills)
+    local data0 = 0
+    local data1 = 0
+    local exp = moreMannable.LEVELUP_EXP
+    for i, v in ipairs(dataOrder0) do
+        local skill = skills[v]
+        local totalSkillPoints = skill[1] * exp + skill[2]
+        data0 = data0 | (totalSkillPoints << (8 * (i - 1)))
+    end
+    for i, v in ipairs(dataOrder1) do
+        local skill = skills[v]
+        local totalSkillPoints = skill[1] * exp + skill[2]
+        data1 = data1 | (totalSkillPoints << (8 * (i - 1)))
+    end
+    local playerVariables = Hyperspace.playerVariables
+    local idStr = math.floor(crew.extend.selfId)
+    playerVariables["_moreMannable_skillTable_data0_" .. idStr] = data0
+    playerVariables["_moreMannable_skillTable_data1_" .. idStr] = data1
+end
+
+---@param crew Hyperspace.CrewMember
+local function loadSkillTable(crew)
+    ---@type SkillTable
+    local skills = crew.table.moreMannable.skills
+    local playerVariables = Hyperspace.playerVariables
+    local idStr = math.floor(crew.extend.selfId)
+    ---@diagnostic disable-next-line: param-type-mismatch
+    if not playerVariables:has_key("_moreMannable_skillTable_data0_" .. idStr) then
+        return
+    end
+    local data0 = math.floor(playerVariables["_moreMannable_skillTable_data0_" .. idStr])
+    local data1 = math.floor(playerVariables["_moreMannable_skillTable_data1_" .. idStr])
+    local exp = moreMannable.LEVELUP_EXP
+    for i, v in ipairs(dataOrder0) do
+        local skill = skills[v]
+        local totalSkillPoints = (data0 >> (8 * (i - 1))) & 0xff
+        skill[1] = totalSkillPoints // exp
+        skill[2] = totalSkillPoints % exp
+    end
+    for i, v in ipairs(dataOrder1) do
+        local skill = skills[v]
+        local totalSkillPoints = (data1 >> (8 * (i - 1))) & 0xff
+        skill[1] = totalSkillPoints // exp
+        skill[2] = totalSkillPoints % exp
+    end
+end
+
 script.on_internal_event(Defines.InternalEvents.CONSTRUCT_CREWMEMBER, function(crew)
     if not crew.table.moreMannable then
         crew.table.moreMannable = {}
@@ -30,6 +82,39 @@ script.on_internal_event(Defines.InternalEvents.CONSTRUCT_CREWMEMBER, function(c
     crewTable.skillUp = false
     crewTable.levelUp = false
 end)
+
+local saveLoaded = true
+script.on_init(function(newGame)
+    if newGame then
+        saveLoaded = true
+    else
+        saveLoaded = false
+    end
+end)
+script.on_internal_event(Defines.InternalEvents.ON_TICK, function()
+    if saveLoaded then
+        return
+    end
+    local shipMgr = Hyperspace.ships.player
+    if not shipMgr then
+        return
+    end
+    saveLoaded = true
+    local vCrewList = shipMgr.vCrewList
+    local size = vCrewList:size()
+    for i = 0, size - 1 do
+        loadSkillTable(vCrewList[i])
+    end
+    local enemyShip = Hyperspace.ships.enemy
+    if not enemyShip then
+        return
+    end
+    vCrewList = enemyShip.vCrewList
+    size = vCrewList:size()
+    for i = 0, size - 1 do
+        loadSkillTable(vCrewList[i])
+    end
+end, 99999)
 
 ---@param shipMgr Hyperspace.ShipManager
 local function resetRecentSkillGain(shipMgr)
@@ -65,11 +150,13 @@ function mods.moreMannable.trainSkill(manningCrew, sysId, time)
             skill[2] = skill[2] + 1
             skill[4] = skill[4] + 1
             crewTable.skillUp = 0
+            saveSkillTable(manningCrew, skillTable)
         end
     else
         skill[2] = skill[2] + 1
         skill[4] = skill[4] + 1
         crewTable.skillUp = 0
+        saveSkillTable(manningCrew, skillTable)
     end
     if skill[2] >= moreMannable.LEVELUP_EXP then
         skill[2] = skill[2] - moreMannable.LEVELUP_EXP

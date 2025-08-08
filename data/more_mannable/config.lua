@@ -5,10 +5,10 @@ mods.moreMannable.auxEnabled = Hyperspace.metaVariables['_moreMannable_auxEnable
 
 mods.moreMannable.MAINLOOP_PRIORITY = -99999
 
-mods.moreMannable.LEVELUP_EXP = 30
+mods.moreMannable.LEVELUP_EXP = 25
 mods.moreMannable.MAX_LEVEL = 3
-mods.moreMannable.MAX_RECENT_SKILL = 2
-mods.moreMannable.EXP_TIME = 25
+mods.moreMannable.MAX_RECENT_SKILL = 3
+mods.moreMannable.EXP_TIME = 20
 
 local mainSystems = {
     [2] = true,
