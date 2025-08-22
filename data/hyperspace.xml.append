@@ -10,8 +10,10 @@
     <mod-append:script>data/more_mannable/texts.lua</mod-append:script>
     <mod-append:script>data/more_mannable/imgs.lua</mod-append:script>
     <mod-append:script>data/more_mannable/skills.lua</mod-append:script>
-    <mod-append:script>data/more_mannable/mannable.lua</mod-append:script>
+    <mod-append:script>data/more_mannable/core.lua</mod-append:script>
     <mod-append:script>data/more_mannable/render.lua</mod-append:script>
 </mod:findLike>
+
+<!-- <mod-overwrite:targetableArtillery enabled="false" xOffset="0" yOffset="-24" fixedYPos="false"/> -->
 
 </FTL>

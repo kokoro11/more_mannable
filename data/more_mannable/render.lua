@@ -4,12 +4,12 @@ local GlobalShips = moreMannable.GlobalShips
 local TEXTS = moreMannable.TEXTS
 local skillTableDesc = moreMannable.skillTableDesc
 
-local whiteColor = Graphics.GL_Color(1, 1, 1, 1)
-local goldColor = Graphics.GL_Color(250 / 255, 250 / 255, 90 / 255, 1.0)
-local ANIME_FRAMES = 90
+local WHITE_COLOR = Graphics.GL_Color(1, 1, 1, 1)
+local GOLD_COLOR = Graphics.GL_Color(250 / 255, 250 / 255, 90 / 255, 1.0)
+local ANIME_FRAMES = 120
 
 local function createPrimitive(filename, x, y)
-    return Hyperspace.Resources:CreateImagePrimitiveString(filename, x, y, 0, whiteColor, 1.0, false)
+    return Hyperspace.Resources:CreateImagePrimitiveString(filename, x, y, 0, WHITE_COLOR, 1.0, false)
 end
 
 local manningPrimitive = {
@@ -173,12 +173,12 @@ script.on_render_event(Defines.RenderEvents.MAIN_MENU, function() end, function(
     local optionBox = optionOn and optionBoxOn or optionBoxOff
     local color
     if mouseInside(optionBox) then
-        color = goldColor
+        color = GOLD_COLOR
         local mouse = Hyperspace.Mouse
         mouse.overrideTooltipWidth = 720
         mouse:SetTooltip(optionOn and TEXTS.AUX_ON_TOOLTIP(moreMannable.MAX_RECENT_SKILL) or TEXTS.AUX_OFF_TOOLTIP())
     else
-        color = whiteColor
+        color = WHITE_COLOR
     end
     Graphics.CSurface.GL_PushMatrix()
     Graphics.CSurface.GL_SetColor(color)

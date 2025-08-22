@@ -6,8 +6,12 @@ end)
 
 local Settings = Hyperspace.Settings
 local TextMeta = {
-    __index = function(texts)
-        return texts['']
+    __index = function(texts, language)
+        if language == '' then
+            return select(2, next(texts)) or ''
+        else
+            return texts['']
+        end
     end,
     __call = function(texts, ...)
         local success, result = pcall(string.format, texts[Settings.language], ...)
@@ -17,10 +21,13 @@ local TextMeta = {
             log("ERROR: " .. result)
             return texts[Settings.language]
         end
+    end,
+    __tostring = function(texts)
+        return texts[Settings.language]
     end
 }
 
----@alias Text table<string, string> | fun(...): string
+---@alias Text table<string, string> | fun(...): string | string
 ---@param texts table<string, string>
 ---@return Text
 function mods.moreMannable.Text(texts)
@@ -50,15 +57,16 @@ function mods.moreMannable.TextCollection(default)
     return collection
 end
 
-function mods.moreMannable.vector_to_string(vec, func)
+function mods.moreMannable.vectorToString(vec, func)
     local s = '['
-    for i = 0, vec:size() - 1 do
-        if func then
+    if func then
+        for i = 0, vec:size() - 1 do
             s = s .. func(vec[i]) .. ','
-        else
+        end
+    else
+        for i = 0, vec:size() - 1 do
             s = s .. tostring(vec[i]) .. ','
         end
     end
-    s = s .. ']'
-    return s
+    return s .. ']'
 end

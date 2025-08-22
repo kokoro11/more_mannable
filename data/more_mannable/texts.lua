@@ -17,9 +17,9 @@ Hacking: Disabled.
 Manning skill levels: Disabled.
 Enable ADVANCED MANNING option for more mannable systems and manning skill levels.]],
     ['zh-Hans'] = [[目前已启用的可操纵系统和操纵加成：
-氧气：+100%%氧气填充速度。
-无人机：+20%%无人机运行速度。
-巨炮：+10%%巨炮充能速度。
+氧气：氧气填充速度+100%%。
+无人机：无人机运行速度+20%%。
+巨炮：巨炮充能速度+10%%。
 时流：已禁用。
 隐形：已禁用。
 心控：已禁用。
@@ -32,6 +32,7 @@ Enable ADVANCED MANNING option for more mannable systems and manning skill level
 TEXTS.AUX_ON_TOOLTIP = Text {
     [''] = [[Current mannable systems and manning bonuses:
 Oxygen: Increases oxygen refill speed by 100/200/300%%.
++ (Level 1/2) Increases repair, movement and healing speed of all aerobic crew onboard by 30/60%%.
 Drones: Increases drone operating speed by 20/30/40%%.
 Artillery: Boosts recharge speed by 10/20/30%%.
 Temporal: Reduces system cooldown by 20/33/43%%.
@@ -41,7 +42,7 @@ Cloaking: Increases evasion by 40%% while cloaking is active.
 Mind Control: Extends mind control duration by 25%%.
 + (Level 1) Reduces system cooldown by 50%%.
 + (Level 2) Mind controlled crew acts twice as fast.
-Hacking: Accelerates hacking speed by 25%%.
+Hacking: Accelerates hacking speed by 25/50/75%%.
 + (Level 1) Reduces system cooldown by 20%%.
 + (Level 2) Counters enemy's hacking drone.
 
@@ -49,18 +50,19 @@ Crew gain experience simply by manning a system or by being at the station when 
 A single crew member can only gain up to %s skill points for the same system per jump.
 Crew drones cannot gain skills.]],
     ['zh-Hans'] = [[目前已启用的可操纵系统和操纵加成：
-氧气：+100/200/300%%氧气填充速度。
-无人机：+20/30/40%%无人机运行速度。
-巨炮：+10/20/30%%巨炮充能速度。
-时流：-20/33/43%%系统冷却时间。
-隐形：启用时+40%%闪避率。
-+（等级1）-20%%系统冷却时间。
-+（等级2）系统有能量时+10%%闪避率。
+氧气：氧气填充速度+100/200/300%%。
++（等级1/2）所有需氧船员的修理、移动和治疗速度+30/60%%。
+无人机：无人机运行速度+20/30/40%%。
+巨炮：巨炮充能速度+10/20/30%%。
+时流：系统冷却时间-20/33/43%%。
+隐形：启用时闪避率+40%%。
++（等级1）系统冷却时间-20%%。
++（等级2）系统有能量时闪避率+10%%。
 心控：心控时间+25%%。
-+（等级1）-50%%系统冷却时间。
++（等级1）系统冷却时间-50%%。
 +（等级2）被心控船员行动速度翻倍。
-黑客：+25%%黑客速度。
-+（等级1）-20%%系统冷却时间。
+黑客：黑客速度+25/50/75%%。
++（等级1）系统冷却时间-20%%。
 +（等级2）能够反制敌舰的黑客无人机。
 
 要训练船员某个系统的技能，请在战斗中操纵或使用该系统。
@@ -79,44 +81,46 @@ TEXTS.MANNING_BONUS_UNKNOWN = Text {
 }
 TEXTS.MANNING_BONUS_ENTRY = TextCollection(TEXTS.MANNING_BONUS_UNKNOWN)
 TEXTS.MANNING_BONUS_ENTRY[2] = Text { -- Oxygen
-    [''] = [[Increases oxygen refill speed by 100/200/300%%]],
-    ['zh-Hans'] = [[+100/200/300%%氧气填充速度]],
+    [''] = [[Increases oxygen refill speed by 100/200/300%%
++ (Level 1/2) Increases repair, movement and healing speed of all aerobic crew onboard by 30/60%%]],
+    ['zh-Hans'] = [[氧气填充速度+100/200/300%%
++（等级1/2）所有需氧船员的修理、移动和治疗速度+30/60%%]],
 }
 TEXTS.MANNING_BONUS_ENTRY[4] = Text { -- Drones
     [''] = [[Increases drone operating speed by 20/30/40%%]],
-    ['zh-Hans'] = [[+20/30/40%%无人机运行速度]],
+    ['zh-Hans'] = [[无人机运行速度+20/30/40%%]],
 }
 TEXTS.MANNING_BONUS_ENTRY[11] = Text { -- Artillery
     [''] = [[Boosts recharge speed by 10/20/30%%]],
-    ['zh-Hans'] = [[+10/20/30%%巨炮充能速度]],
+    ['zh-Hans'] = [[巨炮充能速度+10/20/30%%]],
 }
 TEXTS.MANNING_BONUS_ENTRY[10] = Text { -- Cloaking
     [''] = [[Increases evasion by 40%% while cloaking is active
 + (Level 1) Reduces system cooldown by 20%%
 + (Level 2) Increases evasion by 10%% while system is powered]],
-    ['zh-Hans'] = [[启用时+40%%闪避率。
-+（等级1）-20%%系统冷却时间。
-+（等级2）系统有能量时+10%%闪避率。]],
+    ['zh-Hans'] = [[启用时闪避率+40%%
++（等级1）系统冷却时间-20%%
++（等级2）系统有能量时闪避率+10%%]],
 }
 TEXTS.MANNING_BONUS_ENTRY[14] = Text { -- Mind Control
     [''] = [[Extends mind control duration by 25%%
 + (Level 1) Reduces system cooldown by 50%%
 + (Level 2) Mind controlled crew acts twice as fast]],
-    ['zh-Hans'] = [[心控时间+25%%。
-+（等级1）-50%%系统冷却时间。
-+（等级2）被心控船员行动速度翻倍。]],
+    ['zh-Hans'] = [[心控时间+25%%
++（等级1）系统冷却时间-50%%
++（等级2）被心控船员行动速度翻倍]],
 }
 TEXTS.MANNING_BONUS_ENTRY[15] = Text { -- Hacking
-    [''] = [[Accelerates hacking speed by 25%%
+    [''] = [[Accelerates hacking speed by 25/50/75%%
 + (Level 1) Reduces system cooldown by 20%%
 + (Level 2) Counters enemy's hacking drone]],
-    ['zh-Hans'] = [[+25%%黑客速度。
-+（等级1）-20%%系统冷却时间。
-+（等级2）能够反制敌舰的黑客无人机。]],
+    ['zh-Hans'] = [[黑客速度+25/50/75%%
++（等级1）系统冷却时间-20%%
++（等级2）能够反制敌舰的黑客无人机]],
 }
 TEXTS.MANNING_BONUS_ENTRY[20] = Text { -- Temporal
     [''] = [[Reduces system cooldown by 20/33/43%%]],
-    ['zh-Hans'] = [[-20/33/43%%系统冷却时间]],
+    ['zh-Hans'] = [[系统冷却时间-20/33/43%%]],
 }
 
 TEXTS.SKILLS = Text {
@@ -140,7 +144,7 @@ TEXTS.CANNOT_TRAIN = Text {
 }
 
 TEXTS.SKILL_ENTRY_MAXLEVEL = Text {
-    [''] = [[%s: %s (Maxxed)]],
+    [''] = [[%s: %s (Maxed)]],
     ['zh-Hans'] = [[%s：%s（已最大）]],
 }
 
